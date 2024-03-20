@@ -1,0 +1,6 @@
+{
+  "precision": 0.67,
+  "wait_time": 0.001,
+  "alert_frequency": 2500,
+  "alert_duration_ms": 400 
+}

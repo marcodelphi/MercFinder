@@ -10,6 +10,7 @@ def remove_percentage(value, percentage):
 
 class Config:
   precision: float
+  wait_time: float
   alert_frequency: int
   alert_duration_ms: int
 
@@ -19,8 +20,11 @@ with open("config.json", "r") as file:
     try:
         while True:
           pos = imagesearch(r"Images\exchange-zoom25-4k.png", precision=config['precision'])
+          
           if pos[0] != -1:    
               winsound.Beep(config['alert_frequency'], config['alert_duration_ms'])
-              del pos      
+              del pos
+              
+          sleep(config['wait_time'])
     except KeyboardInterrupt:
         print('\n')    
