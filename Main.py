@@ -1,19 +1,26 @@
+from time import sleep
 import winsound
-import pyautogui as pag  
-import time
+import pyautogui  
+import json
 from python_imagesearch.imagesearch import imagesearch
  
-# frequency is set to 500Hz
-freq = 500
- 
-# duration is set to 100 milliseconds            
-dur = 500
-              
+def remove_percentage(value, percentage):
+  valueToRemove = value * percentage
+  return value - valueToRemove  
 
+class Config:
+  precision: float
+  alert_frequency: int
+  alert_duration_ms: int
 
-while True:
-    pos = imagesearch("Image assets\Exchange.PNG")
-    if pos[0] != -1:                                                                                    
-        winsound.Beep(freq, dur)
-        del pos
-    time.sleep(0.05)
+with open("config.json", "r") as file:
+    config: Config = json.load(file)
+    
+    try:
+        while True:
+          pos = imagesearch(r"Images\exchange-zoom25-4k.png", precision=config['precision'])
+          if pos[0] != -1:    
+              winsound.Beep(config['alert_frequency'], config['alert_duration_ms'])
+              del pos      
+    except KeyboardInterrupt:
+        print('\n')    
