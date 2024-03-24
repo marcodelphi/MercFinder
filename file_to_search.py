@@ -1,0 +1,5 @@
+class FileToSearch:
+  filename: str
+  
+  def __init__(self, filename: str) -> None:
+    self.filename = filename 
