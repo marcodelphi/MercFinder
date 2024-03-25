@@ -9,9 +9,9 @@ from python_imagesearch.imagesearch import r, imagesearch, imagesearch_click
 from config import Config
 from file_to_search import FileToSearch
 from hotkeys import HotKeysService
-from constants import title
+from constants import *
 
-found = "TotalBattle.exe" in (p.name() for p in psutil.process_iter())
+found = tb_process_name in (p.name() for p in psutil.process_iter())
 
 if (not found):
   win32ui.MessageBox('Total Battle was not found. Please, start it before use MercFinder', title, win32con.MB_OK)
