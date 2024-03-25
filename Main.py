@@ -19,19 +19,21 @@ if (not found):
   
 easygui.msgbox(title=title, msg="Este é um programa em desenvolvimento para busca de qualquer imagem em sua tela.\n\n"+
                "Para trocar a imagem padrão aperte a tecla HOME 2x e siga as instruções\n\n"+
-               "Para pausar a execução da busca, aperta a tecla PAUSE 2x e para continuar, novamente PAUSE 2x")
+               "Para pausar a execução da busca, aperta a tecla PAUSE 2x e para continuar, novamente PAUSE 2x\n\n"+
+               "Para sair da aplicação, aperte a tecla DEL 2x")
  
 with open("config.json", "r") as file:
     config: Config = json.load(file)
     
-    fileToSearch = FileToSearch(r"Images\default_image.png")
+    filename = str.format("Images\{}", default_image_filename)
+    fileToSearch = FileToSearch(filename)
 
     hotkeysService = HotKeysService(fileToSearch, config)
 
     hotkeysService.start()
     
     try:
-        while True:
+        while hotkeysService.running:
           if (hotkeysService.choosingFile == True):
             sleep(1)
             continue

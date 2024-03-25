@@ -8,6 +8,8 @@ pip install pywin32
 
 pip install easygui
 
+pip install opencv-python
+
 pip install global_hotkeys -U
 
 

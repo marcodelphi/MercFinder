@@ -1,3 +1,5 @@
 title = "Mercenary Exchange Finder - By Marco André"
 move_with_cursor_process_name = "MercFinderMoveWithCursor.exe"
 tb_process_name = "TotalBattle.exe"
+temp_file_name = "image_to_find.png"
+default_image_filename = "default_image.png"
