@@ -19,7 +19,9 @@ if (not found):
   
 easygui.msgbox(title=title, msg="Este é um programa em desenvolvimento para busca de qualquer imagem em sua tela.\n\n"+
                "Para trocar a imagem padrão aperte a tecla HOME 2x e siga as instruções\n\n"+
-               "Para pausar a execução da busca, aperta a tecla PAUSE 2x e para continuar, novamente PAUSE 2x\n\n"+
+               "Para pausar a execução da busca, aperte a tecla PAUSE 2x e para continuar, novamente PAUSE 2x\n\n"+
+               "Para capturar uma nova região a procurar, aperte a tecla CTRL + M 2x e siga as instruções\n\n"+
+               "Você pode utilizar as teclas W, A, S e D para fazer rolagem na tela\n\n"+
                "Para sair da aplicação, aperte a tecla DEL 2x")
  
 with open("config.json", "r") as file:

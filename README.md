@@ -24,3 +24,12 @@ alert_duration_ms: duração do alerta em ms. Padrão 400,
 stop_when_found: quando true, será mostrado um dialógo na tela quando a imagem for encontrada (esta opção só funciona corretamente se você estiver rodando o jogo com apenas 1 monitor), pedindo sua confirmação se a mesma foi encontrada. Caso diga que não, a busca irá continuar.
 
 
+
+Utilização:
+
+Trocar imagem para busca: HOME 2x
+Pausar a execução da busca: PAUSE 2x
+Capturar imagem: CTRL + M 2x
+Sair da aplicação: DEL 2x
+
+Você pode navegar com as setas: W, A, S, D
